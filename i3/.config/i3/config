@@ -89,7 +89,7 @@ bindsym $mod+a focus parent
 set $workspace1 "1:"
 set $workspace2 "2:"
 set $workspace3 "3:"
-set $workspace4 "4:"
+set $workspace4 "4:"
 set $workspace5 "5:"
 set $workspace6 "6:"
 set $workspace7 "7:"
@@ -98,7 +98,6 @@ set $workspace9 "9:"
 set $workspace10 "10:"
 
 # Open applications on specific workspaces
-assign [class="vlc"] $workspace1
 assign [class="code-oss"] $workspace1
 assign [class="Geary"] $workspace5
 assign [class="Thunderbird"] $workspace5
@@ -221,12 +220,13 @@ bindsym $mod+Return exec termite
 bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+f exec termite -e ranger
-bindsym $mod+g exec lutris
+bindsym $mod+g exec steam
+bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec termite -e htop
 bindsym $mod+e exec code
 bindsym $mod+m exec thunderbird
 bindsym $mod+s exec spotify
-bindsym $mod+Shift+s exec steam
+bindsym $mod+Shift+s exec smplayer
 bindsym $mod+p exec popcorntime
 bindsym $mod+Shift+p exec passkeex2
 bindsym $mod+F5 exec playerctl play-pause

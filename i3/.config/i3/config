@@ -1,0 +1,272 @@
+#
+#                      WNWW
+#                    WKkdxOXN
+#                    WOolldOX
+#                     NKOOXNNXKKXW
+#              WK00XW     WWKdllokXW
+#             W0olldK     WWKxllllokXW
+#             WXkddOXWWWW   WN0dllllokXW
+#        WNNW   WNWWXOxxkKWW  WN0dllllokXW
+#       XkddkXW    WKdlllokOKW   N0dlllld0W
+#      WKdlldKW     WKxollllokKW  WNOollld0W
+#       WX00XNX00KN   NKxollllokKW  W0olllxX
+#           WXdlloxKNW WNKxoollldKW  XxllldK
+#            NOollllx0N   NXKkddkX  WXdllldX
+#             WKkollloxKN    WNNW   XkllllkN
+#               WKkolllox0XNWW WWWX0dllllxXW
+#                 WKkollllodxkkkkxolllloONW
+#                   WKkdllllllllllllldOXW
+#                     WNKOkkxxdxxxk0KNW
+#                           WWWWWW
+#
+#
+# I3 configuration file
+# Mod
+set $mod Mod4
+
+# Font
+font pango:Hack 9, FontAwesome 9
+
+exec --no-startup-id sh ~/.screenlayout/tri.sh
+
+# No borders
+hide_edge_borders both
+new_window 1pixel
+new_float none
+
+# Drag windows
+floating_modifier $mod
+
+# Gaps
+gaps inner 10
+gaps outer 5
+
+# Change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Split in horizontal orientation
+bindsym $mod+c split h
+
+# Split in vertical orientation
+bindsym $mod+v split v
+
+# Audio
+exec --no-startup-id volumeicon
+
+# bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+exec --no-startup-id pulseaudio
+exec --no-startup-id pa-applet
+bindsym $mod+Ctrl+m exec pavucontrol
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+F11 fullscreen
+
+# Change container layout
+# bindsym Mod1+s layout stacking
+# bindsym Mod1+t layout tabbed
+bindcode $mod+23 layout toggle splitv splith
+bindcode $mod+Shift+23 layout toggle tabbed split
+
+# Toggle tiling / floating
+bindsym $mod+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+Shift+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# Workspaces names
+set $workspace1 "1:"
+set $workspace2 "2:"
+set $workspace3 "3:"
+set $workspace4 "4:"
+set $workspace5 "5:"
+set $workspace6 "6:"
+set $workspace7 "7:"
+set $workspace8 "8:"
+set $workspace9 "9:"
+set $workspace10 "10:"
+
+# Open applications on specific workspaces
+assign [class="vlc"] $workspace1
+assign [class="code-oss"] $workspace1
+assign [class="Geary"] $workspace5
+assign [class="Thunderbird"] $workspace5
+assign [class="Spotify"] $workspace6
+assign [class="Parole"] $workspace6
+assign [class="Steam"] $workspace7
+for_window [class="Wine"] floating enable
+for_window [title="PlayOnLinux"] floating enable
+for_window [workspace=$workspace3] layout tabbed
+for_window [workspace=$workspace4] layout tabbed
+for_window [workspace=$workspace7] layout tabbed
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
+
+# Move workspace between screens
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+j move workspace to output up
+bindsym $mod+Ctrl+k move workspave to output down
+bindsym $mod+Ctrl+l move workspace to output right
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace
+bindsym $mod+Shift+r restart
+# bindsym $mod+Shift+p exec sh ~/.config/i3/polybar.sh
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
+
+    bindsym Lefj resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# resize mode
+bindsym $mod+r mode "resize"
+
+# Xresources      var      value       fallback
+set_from_resource $bg      background  #19043C
+set_from_resource $fg      foreground  #F1F1F1
+set_from_resource $black   color0      #19043C
+set_from_resource $red     color1      #EE79A9
+set_from_resource $green   color2      #8C9440
+set_from_resource $yellow  color3      #DE935F
+set_from_resource $blue    color4      #05C6F1
+set_from_resource $purple  color5      #85678F
+set_from_resource $cyan    color6      #5E8D87
+set_from_resource $grey    color7      #969CD3
+set_from_resource $focused    color9      #969CD3
+
+# bar
+bar {
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position top
+    tray_output primary
+    strip_workspace_numbers yes
+    colors {
+           background $bg
+           separator $cyan
+           # ARC
+           #                  border	background	text
+           focused_workspace  $bg   	$fg		   	$bg
+           inactive_workspace $bg  		$bg 		$grey
+           urgent_workspace   $bg  		$red   		$foreground
+    }
+}
+
+#Press $mod (super) and X to exit - check toolbar for next choices
+bindsym $mod+x mode "$mode_system"
+
+set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+mode "$mode_system" {
+    bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# shortcuts for launch programs
+bindsym $mod+Return exec termite
+bindsym $mod+w exec firefox
+bindsym $mod+Shift+w exec chromium
+bindsym $mod+f exec termite -e ranger
+bindsym $mod+g exec lutris
+bindsym $mod+t exec termite -e htop
+bindsym $mod+e exec code
+bindsym $mod+m exec thunderbird
+bindsym $mod+s exec spotify
+bindsym $mod+Shift+s exec steam
+bindsym $mod+p exec popcorntime
+bindsym $mod+Shift+p exec passkeex2
+bindsym $mod+F5 exec playerctl play-pause
+bindsym $mod+F6  exec playerctl previous
+bindsym $mod+F7  exec playerctl next
+# bindsym $mod+b exec i3lock -i ~/misc/walls/0FTX0KW.png
+bindsym $mod+b exec sh ~/.config/i3/scripts/.lock.sh
+bindsym $mod+q kill
+bindsym Print exec screenshot
+bindsym $mod+F1 exec --no-startup-id "amixer -q sset Master 2%-"
+bindsym $mod+F2 exec --no-startup-id "amixer -q sset Master 2%+"
+bindsym $mod+F3 exec --no-startup-id light -U 2 # decrease screen brightness
+bindsym $mod+F4 exec --no-startup-id light -A 2 # increase screen brightness
+bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+d exec --no-startup-id dmenu_run
+# Multimedia Keys
+# increase volume
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
+# decrease volume
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+# mute volume
+bindsym XF86AudioMute exec amixer -q set Master mute
+# pause / play / next / previous
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Multi-screen screenshots with scrot
+bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
+# OSX-like area selection screenshots
+bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
+# bindsym $mod+d exec rofi -show run
+
+# startup
+# exec netctl start wlp3s0-MIWIFI_5G_R5yc
+exec --no-startup-id autocutsel
+# exec --no-startup-id setxkbmap -layout es
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+# exec --no-startup-id nm-applet
+exec_always --no-startup-id feh --bg-scale ~/misc/walls/welcome_home_dracula.png
+exec --no-startup-id xset -dpms s off
+# exec --no-startup-id conky
+exec xrdb -merge ~/.Xresources

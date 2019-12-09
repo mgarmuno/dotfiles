@@ -86,8 +86,8 @@ bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Workspaces names
-set $workspace1 "1:"
-set $workspace2 "2:"
+set $workspace1 "1:"
+set $workspace2 "2:"
 set $workspace3 "3:"
 set $workspace4 "4:"
 set $workspace5 "5:"
@@ -222,7 +222,8 @@ bindsym $mod+Shift+w exec chromium
 bindsym $mod+f exec termite -e ranger
 bindsym $mod+g exec steam
 bindsym $mod+Shift+g exec lutris
-bindsym $mod+t exec termite -e htop
+bindsym $mod+t exec transsmission-gtk
+bindsym $mod+Shift+t exec termite -e htop
 bindsym $mod+e exec code
 bindsym $mod+m exec thunderbird
 bindsym $mod+s exec spotify

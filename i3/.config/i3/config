@@ -222,7 +222,7 @@ bindsym $mod+Shift+w exec chromium
 bindsym $mod+f exec termite -e ranger
 bindsym $mod+g exec steam
 bindsym $mod+Shift+g exec lutris
-bindsym $mod+t exec transsmission-gtk
+bindsym $mod+t exec transmission-gtk
 bindsym $mod+Shift+t exec termite -e htop
 bindsym $mod+e exec code
 bindsym $mod+m exec thunderbird

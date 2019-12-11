@@ -277,4 +277,5 @@ exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.png
 exec --no-startup-id xset -dpms s off
 # exec --no-startup-id conky
-exec xrdb -merge ~/.Xresources
+exec --no-startup-if xrdb -merge ~/.Xresources
+exec --no-startup-if xrandr --dpi 96

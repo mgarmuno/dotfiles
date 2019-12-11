@@ -222,7 +222,7 @@ bindsym $mod+Shift+w exec chromium
 bindsym $mod+f exec termite -e ranger
 bindsym $mod+g exec steam
 bindsym $mod+Shift+g exec lutris
-bindsym $mod+t exec transsmission-gtk
+bindsym $mod+t exec transmission-gtk
 bindsym $mod+Shift+t exec termite -e htop
 bindsym $mod+e exec code
 bindsym $mod+m exec thunderbird
@@ -268,8 +268,8 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 exec --no-startup-id autocutsel
 # exec --no-startup-id setxkbmap -layout es
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
-exec --no-startup-id nm-applet
-exec_always --no-startup-id feh --bg-scale ~/misc/walls/welcome_home_dracula.png
+# exec --no-startup-id nm-applet
+exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.png
 exec --no-startup-id xset -dpms s off
 # exec --no-startup-id conky
 exec xrdb -merge ~/.Xresources

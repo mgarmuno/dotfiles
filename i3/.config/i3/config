@@ -244,8 +244,10 @@ bindsym $mod+q kill
 bindsym Print exec screenshot
 bindsym $mod+F1 exec --no-startup-id "amixer -q sset Master 2%-"
 bindsym $mod+F2 exec --no-startup-id "amixer -q sset Master 2%+"
-bindsym $mod+F3 exec --no-startup-id light -U 2 # decrease screen brightness
-bindsym $mod+F4 exec --no-startup-id light -A 2 # increase screen brightness
+#bindsym $mod+F3 exec --no-startup-id light -U 2 # decrease screen brightness
+#bindsym $mod+F4 exec --no-startup-id light -A 2 # increase screen brightness
+bindsym $mod+F3 exec pkexec /usr/bin/brillo -U 2 && :# increase screen brightness
+bindsym $mod+F4 exec pkexec /usr/bin/brillo -A 2 && :# increase screen brightness
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 # Multimedia Keys
@@ -275,4 +277,5 @@ exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.png
 exec --no-startup-id xset -dpms s off
 # exec --no-startup-id conky
-exec xrdb -merge ~/.Xresources
+exec --no-startup-if xrdb -merge ~/.Xresources
+exec --no-startup-if xrandr --dpi 96

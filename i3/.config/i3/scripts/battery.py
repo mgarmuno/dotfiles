@@ -20,5 +20,5 @@ else:
         batteryString = '<span color="white"></span>'
     else:
         batteryString = '<span color="white"></span>'
-    batteryString = batteryString + ' ' + battery.percent
+    batteryString = batteryString + ' ' + str(int(battery.percent)) + '%'
     print(batteryString)

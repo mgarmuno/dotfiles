@@ -246,8 +246,8 @@ bindsym $mod+F1 exec --no-startup-id "amixer -q sset Master 2%-"
 bindsym $mod+F2 exec --no-startup-id "amixer -q sset Master 2%+"
 #bindsym $mod+F3 exec --no-startup-id light -U 2 # decrease screen brightness
 #bindsym $mod+F4 exec --no-startup-id light -A 2 # increase screen brightness
-bindsym $mod+F3 exec pkexec /usr/bin/brillo -U 2 && :# increase screen brightness
-bindsym $mod+F4 exec pkexec /usr/bin/brillo -A 2 && :# increase screen brightness
+bindsym $mod+F3 exec xbacklight -dec 2%
+bindsym $mod+F4 exec xbacklight -inc 2%
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 # Multimedia Keys

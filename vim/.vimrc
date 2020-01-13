@@ -12,6 +12,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'jlanzarotta/bufexplorer'
 
 call plug#end()
 
@@ -20,6 +21,11 @@ no <C-j> <C-w>j| "switching to below window
 no <C-k> <C-w>k| "switching to above window
 no <C-l> <C-w>l| "switching to right window
 no <C-h> <C-w>h| "switching to left window
+
+" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
+nnoremap <silent> <M-F12> :BufExplorer<CR>
+nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <S-F12> :bp<CR>
 
 set tabstop=4
 set softtabstop=0 noexpandtab

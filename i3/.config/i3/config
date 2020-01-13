@@ -113,6 +113,7 @@ for_window [title="PlayOnLinux"] floating enable
 for_window [workspace=$workspace3] layout tabbed
 for_window [workspace=$workspace4] layout tabbed
 for_window [workspace=$workspace7] layout tabbed
+for_window [workspace=$workspace8] layout tabbed
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -225,7 +226,7 @@ bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+Ctrl+w exec google-chrome-stable
 bindsym $mod+f exec termite -e ranger
-bindsym $mod+g exec steam
+bindsym $mod+g exec steam-runtime
 bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec transmission-gtk
 bindsym $mod+Shift+t exec termite -e htop

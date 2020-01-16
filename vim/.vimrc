@@ -27,6 +27,7 @@ nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR>
 
+set clipboard=unnamed
 set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4

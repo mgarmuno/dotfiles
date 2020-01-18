@@ -272,6 +272,7 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 # startup
 # exec netctl start wlp3s0-MIWIFI_5G_R5yc
 exec --no-startup-id autocutsel
+exec --no-startup-id blueman-applet
 # exec --no-startup-id setxkbmap -layout es
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 # exec --no-startup-id nm-applet

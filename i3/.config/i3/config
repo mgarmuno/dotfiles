@@ -98,9 +98,6 @@ set $workspace9 "9:"
 set $workspace10 "10:"
 set $workspace11 "11:"
 set $workspace12 "12:"
-set $workspace13 "13:"
-set $workspace14 "14:"
-set $workspace15 "15:"
 
 workspace $workspace1 output DP-0
 workspace $workspace2 output DVI-D-0
@@ -131,11 +128,8 @@ bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
-bindsym $mod+Shift+F1 move container to workspace $workspace11
-bindsym $mod+Shift+F2 move container to workspace $workspace12
-bindsym $mod+Shift+F3 move container to workspace $workspace13
-bindsym $mod+Shift+F4 move container to workspace $workspace14
-bindsym $mod+Shift+F5 move container to workspace $workspace15
+bindsym $mod+Shift+- move container to workspace $workspace11
+bindsym $mod+Shift+= move container to workspace $workspace12
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -148,11 +142,8 @@ bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
-bindsym $mod+F1 workspace $workspace11
-bindsym $mod+F2 workspace $workspace12
-bindsym $mod+F3 workspace $workspace13
-bindsym $mod+F4 workspace $workspace14
-bindsym $mod+F5 workspace $workspace15
+bindsym $mod+- workspace $workspace11
+bindsym $mod+= workspace $workspace12
 bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 

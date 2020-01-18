@@ -230,8 +230,10 @@ bindsym $mod+g exec steam-runtime
 bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec transmission-gtk
 bindsym $mod+Shift+t exec termite -e htop
-bindsym $mod+e exec code
+bindsym $mod+e exec termite -e vim
+bindsym $mod+Shift+e exec code
 bindsym $mod+m exec thunderbird
+bindsym $mod+n exec blueman-manager
 bindsym $mod+s exec spotify
 bindsym $mod+Shift+s exec smplayer
 bindsym $mod+p exec popcorntime

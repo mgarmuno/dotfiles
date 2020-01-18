@@ -113,6 +113,7 @@ for_window [title="PlayOnLinux"] floating enable
 for_window [workspace=$workspace3] layout tabbed
 for_window [workspace=$workspace4] layout tabbed
 for_window [workspace=$workspace7] layout tabbed
+for_window [workspace=$workspace8] layout tabbed
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1

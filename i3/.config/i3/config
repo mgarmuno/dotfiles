@@ -231,6 +231,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+Ctrl+w exec google-chrome-stable
+bindsym $mod+Mod1+w exec tor-browser
 bindsym $mod+f exec termite -e ranger
 bindsym $mod+g exec steam-runtime
 bindsym $mod+Shift+g exec lutris

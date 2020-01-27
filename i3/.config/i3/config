@@ -245,6 +245,7 @@ bindsym $mod+s exec spotify
 bindsym $mod+Shift+s exec smplayer
 bindsym $mod+p exec popcorntime
 bindsym $mod+Shift+p exec passkeex2
+bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+F5 exec playerctl play-pause
 bindsym $mod+F6  exec playerctl previous
 bindsym $mod+F7  exec playerctl next

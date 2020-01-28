@@ -241,6 +241,7 @@ bindsym $mod+e exec termite -e vim
 bindsym $mod+Shift+e exec code
 bindsym $mod+m exec thunderbird
 bindsym $mod+n exec blueman-manager
+bindsym $mod+Shift+n exec networkmanager_dmenu
 bindsym $mod+s exec spotify
 bindsym $mod+Shift+s exec smplayer
 bindsym $mod+p exec popcorntime

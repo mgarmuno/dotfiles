@@ -116,6 +116,8 @@ for_window [workspace=$workspace3] layout tabbed
 for_window [workspace=$workspace4] layout tabbed
 for_window [workspace=$workspace7] layout tabbed
 for_window [workspace=$workspace8] layout tabbed
+for_window [workspace=$workspace9] layout tabbed
+for_window [workspace=$workspace10] layout tabbed
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -241,6 +243,7 @@ bindsym $mod+e exec termite -e vim
 bindsym $mod+Shift+e exec code
 bindsym $mod+m exec thunderbird
 bindsym $mod+n exec blueman-manager
+bindsym $mod+Shift+n exec networkmanager_dmenu
 bindsym $mod+s exec spotify
 bindsym $mod+Shift+s exec smplayer
 bindsym $mod+p exec popcorntime

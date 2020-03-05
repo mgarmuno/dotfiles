@@ -1,6 +1,7 @@
 #!/bin/bash
 
 hostname=$(hostname)
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ls /etc/hosts.old &> /dev/null
 
 if [ $? -ne 0 ];
@@ -20,9 +21,9 @@ echo "########" >> /etc/hosts
 
 echo >> /etc/hosts
 
-if [ -f /home/magneto/misc/BloqueosFireFox.txt ];
+if [ -f $DIR/BloqueosFireFox.txt ];
 then
-	cat /home/magneto/misc/BloqueosFireFox.txt >> /etc/hosts
+	cat $DIR/BloqueosFireFox.txt >> /etc/hosts
 fi
 
 echo >> /etc/hosts

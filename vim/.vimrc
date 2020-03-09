@@ -46,5 +46,3 @@ set ruler
 set number
 color dracula
 colorscheme dracula
-
-autocmd vimenter * NERDTree

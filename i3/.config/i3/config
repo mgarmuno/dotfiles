@@ -60,7 +60,7 @@ bindsym $mod+c split h
 bindsym $mod+v split v
 
 # Audio
-exec --no-startup-id volumeicon
+exec --no-startup-id pasystray
 
 # bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id pulseaudio

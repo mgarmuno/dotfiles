@@ -7,10 +7,14 @@ sudo pacman -S base-devel
 sudo pacman -S steam
 sudo pacman -S lutris
 sudo pacman -S git
+sudo pacman -S tor
+sudo pacman -S transmission-gtk
+
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay
 sudo makepkg -si
 cd
+
 yay -S popcorntime
 yay -S spotify
-yay -S 
+yay -S tor-browser

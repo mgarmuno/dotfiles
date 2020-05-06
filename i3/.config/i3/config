@@ -27,8 +27,6 @@ set $mod Mod4
 # Font
 font pango:Hack 9, FontAwesome 9
 
-exec --no-startup-id sh ~/.screenlayout/tri.sh
-
 # No borders
 hide_edge_borders both
 new_window 1pixel
@@ -99,9 +97,8 @@ set $workspace10 "10:"
 set $workspace11 "11:"
 set $workspace12 "12:"
 
-workspace $workspace1 output DP-0
-workspace $workspace2 output DVI-D-0
-workspace $workspace3 output HDMI-0
+workspace $workspace2 output DP2
+workspace $workspace1 output DP1
 
 # Open applications on specific workspaces
 assign [class="code-oss"] $workspace1
@@ -229,7 +226,7 @@ mode "$mode_system" {
 }
 
 # shortcuts for launch programs
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+Ctrl+w exec google-chrome-stable
@@ -292,5 +289,5 @@ exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.png
 exec --no-startup-id xset -dpms s off
 # exec --no-startup-id conky
-exec --no-startup-if xrdb -merge ~/.Xresources
-exec xrandr --dpi 96
+exec --no-startup-id xrdb -merge ~/.Xresources
+exec xrandr --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal

@@ -97,8 +97,8 @@ set $workspace10 "10:"
 set $workspace11 "11:"
 set $workspace12 "12:"
 
-workspace $workspace2 output DP2
-workspace $workspace1 output DP1
+workspace $workspace1 output HDMI2
+workspace $workspace4 output DP1
 
 # Open applications on specific workspaces
 assign [class="code-oss"] $workspace1
@@ -239,6 +239,7 @@ bindsym $mod+Shift+t exec termite -e htop
 bindsym $mod+e exec code
 bindsym $mod+Shift+e exec termite -e vim
 bindsym $mod+m exec thunderbird
+bindsym $mod+Shift+m exec virt-manager
 bindsym $mod+n exec blueman-manager
 bindsym $mod+Shift+n exec networkmanager_dmenu
 bindsym $mod+s exec spotify
@@ -290,4 +291,4 @@ exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.
 exec --no-startup-id xset -dpms s off
 # exec --no-startup-id conky
 exec --no-startup-id xrdb -merge ~/.Xresources
-exec xrandr --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+# exec xrandr --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal

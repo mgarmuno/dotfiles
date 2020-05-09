@@ -264,9 +264,9 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 # Multimedia Keys
 # increase volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
 # decrease volume
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
 # mute volume
 bindsym XF86AudioMute exec amixer -q set Master mute
 # pause / play / next / previous
@@ -292,4 +292,4 @@ exec --no-startup-id xset -dpms s off
 # exec --no-startup-id conky
 exec --no-startup-id xrdb -merge ~/.Xresources
 # exec xrandr --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-xrandr --output DP1 --off --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off
+exec xrandr --output DP1 --off --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off

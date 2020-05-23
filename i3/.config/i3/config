@@ -27,6 +27,8 @@ set $mod Mod4
 # Font
 font pango:Hack 9, FontAwesome 9
 
+exec sh ~/.screenlayout/tri.sh
+
 # No borders
 hide_edge_borders both
 new_window 1pixel
@@ -84,10 +86,10 @@ bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Workspaces names
-set $workspace1 "1:"
-set $workspace2 "2:"
-set $workspace3 "3:"
-set $workspace4 "4:"
+set $workspace1 "1:"
+set $workspace2 "2:"
+set $workspace3 "3:"
+set $workspace4 "4:"
 set $workspace5 "5:"
 set $workspace6 "6:"
 set $workspace7 "7:"
@@ -97,8 +99,7 @@ set $workspace10 "10:"
 set $workspace11 "11:"
 set $workspace12 "12:"
 
-workspace $workspace1 output HDMI2
-workspace $workspace4 output DP1
+workspace $workspace4 output DVI-D-0
 
 # Open applications on specific workspaces
 assign [class="code-oss"] $workspace1
@@ -109,8 +110,9 @@ assign [class="Parole"] $workspace6
 assign [class="Steam"] $workspace7
 for_window [class="Wine"] floating enable
 for_window [title="PlayOnLinux"] floating enable
+for_window [workspace=$workspace1] layout tabbed
+for_window [workspace=$workspace2] layout tabbed
 for_window [workspace=$workspace3] layout tabbed
-for_window [workspace=$workspace4] layout tabbed
 for_window [workspace=$workspace7] layout tabbed
 for_window [workspace=$workspace8] layout tabbed
 for_window [workspace=$workspace9] layout tabbed
@@ -248,8 +250,8 @@ bindsym $mod+p exec popcorntime
 bindsym $mod+Shift+p exec passkeex2
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+F5 exec playerctl play-pause
-bindsym $mod+F6  exec playerctl previous
-bindsym $mod+F7  exec playerctl next
+bindsym $mod+F6 exec playerctl previous
+bindsym $mod+F7 exec playerctl next
 # bindsym $mod+b exec i3lock -i ~/misc/walls/0FTX0KW.png
 bindsym $mod+b exec sh ~/.config/i3/scripts/.lock.sh
 bindsym $mod+q kill
@@ -281,15 +283,10 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 # bindsym $mod+d exec rofi -show run
 
 # startup
-# exec netctl start wlp3s0-MIWIFI_5G_R5yc
 exec --no-startup-id autocutsel
 exec --no-startup-id blueman-applet
-# exec --no-startup-id setxkbmap -layout es
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
-# exec --no-startup-id nm-applet
 exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.png
 exec --no-startup-id xset -dpms s off
-# exec --no-startup-id conky
 exec --no-startup-id xrdb -merge ~/.Xresources
-# exec xrandr --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-exec xrandr --output DP1 --off --output DP2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off
+exec xrandr --output DVI-D-0 --mode 1920x1080 --pos 2560x180 --rotate normal --output HDMI-0 --off --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off

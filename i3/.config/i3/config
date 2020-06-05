@@ -48,10 +48,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # Move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym Ctrl+Shift+h move left
+bindsym Ctrl+Shift+j move down
+bindsym Ctrl+Shift+k move up
+bindsym Ctrl+Shift+l move right
 
 # Split in horizontal orientation
 bindsym $mod+c split h
@@ -232,14 +232,16 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+Ctrl+w exec google-chrome-stable
-bindsym $mod+Mod1+w exec tor-browser
-bindsym $mod+f exec termite -e ranger
-bindsym $mod+g exec steam-runtime
+bindsym $mod+Mod1+w exec torbrowser-launcher
+bindsym $mod+f exec alacritty -e ranger
+bindsym $mod+Shift+f exec thunar
+# bindsym $mod+g exec steam-runtime
+bindsym $mod+g exec gamehub
 bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec transmission-gtk
-bindsym $mod+Shift+t exec termite -e htop
+bindsym $mod+Shift+t exec alacritty -e htop
 bindsym $mod+e exec code
-bindsym $mod+Shift+e exec termite -e vim
+bindsym $mod+Shift+e exec alacritty -e vim
 bindsym $mod+m exec thunderbird
 bindsym $mod+Shift+m exec virt-manager
 bindsym $mod+n exec blueman-manager
@@ -266,9 +268,9 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 # Multimedia Keys
 # increase volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 2%+ unmute
 # decrease volume
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 2%- unmute
 # mute volume
 bindsym XF86AudioMute exec amixer -q set Master mute
 # pause / play / next / previous
@@ -284,9 +286,10 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 
 # startup
 exec --no-startup-id autocutsel
+exec --no-startup-id xfce4-clipman
 exec --no-startup-id blueman-applet
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.png
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id xrdb -merge ~/.Xresources
-exec xrandr --output DVI-D-0 --mode 1920x1080 --pos 2560x180 --rotate normal --output HDMI-0 --off --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off
+exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --pos 2560x180 --rotate normal --output HDMI-0 --off --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off

@@ -237,7 +237,7 @@ bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+Ctrl+w exec google-chrome-stable
 bindsym $mod+Mod1+w exec torbrowser-launcher
-bindsym $mod+f exec alacritty -e ranger
+bindsym $mod+f exec termite -e ranger
 bindsym $mod+Shift+f exec thunar
 bindsym $mod+g exec steam-runtime
 #bindsym $mod+g exec gamehub

@@ -150,9 +150,13 @@ bindsym Mod1+Shift+Tab workspace prev
 
 # Move workspace between screens
 bindsym $mod+Ctrl+h move workspace to output left
+bindsym Mod1+Ctrl+Left move workspace to output left
 bindsym $mod+Ctrl+j move workspace to output up
+bindsym Mod1+Ctrl+Up move workspace to output up
 bindsym $mod+Ctrl+k move workspave to output down
+bindsym Mod1+Ctrl+Down move workspave to output down
 bindsym $mod+Ctrl+l move workspace to output right
+bindsym Mod1+Ctrl+Right move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -228,7 +232,7 @@ mode "$mode_system" {
 }
 
 # shortcuts for launch programs
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec termite
 bindsym $mod+w exec firefox
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+Ctrl+w exec google-chrome-stable
@@ -239,9 +243,9 @@ bindsym $mod+Shift+f exec thunar
 bindsym $mod+g exec gamehub
 bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec transmission-gtk
-bindsym $mod+Shift+t exec alacritty -e htop
+bindsym $mod+Shift+t exec termite -e htop
 bindsym $mod+e exec code
-bindsym $mod+Shift+e exec alacritty -e vim
+bindsym $mod+Shift+e exec termite -e vim
 bindsym $mod+m exec thunderbird
 bindsym $mod+Shift+m exec virt-manager
 bindsym $mod+n exec blueman-manager

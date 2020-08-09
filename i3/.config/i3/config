@@ -245,7 +245,7 @@ bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec transmission-gtk
 bindsym $mod+Shift+t exec termite -e htop
 bindsym $mod+e exec code
-bindsym $mod+Shift+e exec termite -e vim
+bindsym $mod+Shift+e exec ~/.emacs.d/bin/doom run
 bindsym $mod+m exec thunderbird
 bindsym $mod+Shift+m exec virt-manager
 bindsym $mod+n exec blueman-manager

@@ -10,7 +10,6 @@ try:
     bus = dbus.SessionBus()
     spotify = bus.get_object("org.mpris.MediaPlayer2.spotify", "/org/mpris/MediaPlayer2")
 
-
     if os.environ.get('BLOCK_BUTTON'):
         control_iface = dbus.Interface(spotify, 'org.mpris.MediaPlayer2.Player')
         if (os.environ['BLOCK_BUTTON'] == '1'):

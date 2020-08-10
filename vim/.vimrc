@@ -39,6 +39,7 @@ set clipboard=unnamed
 set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
+set relativenumber
 setlocal omnifunc=go#complete#Complete
 
 let g:dracula_colorterm = 0
@@ -48,6 +49,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+set encoding=utf-8
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'

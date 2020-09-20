@@ -20,5 +20,6 @@ color15=    #E6E6E6
 
 [options]
 font = Hack 10
+scrollback_lines = 10000
 
 

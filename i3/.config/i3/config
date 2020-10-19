@@ -117,6 +117,10 @@ for_window [workspace=$workspace7] layout tabbed
 for_window [workspace=$workspace8] layout tabbed
 for_window [workspace=$workspace9] layout tabbed
 for_window [workspace=$workspace10] layout tabbed
+for_window [workspace=$workspace7] floating enable
+for_window [workspace=$workspace8] floating enable
+for_window [instance="origin.exe"] floating enable
+for_window [instance="^origin.exe$" class="Wine"] floating enable, fullscreen disable 
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -149,14 +153,10 @@ bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 
 # Move workspace between screens
-bindsym $mod+Ctrl+h move workspace to output left
-bindsym Mod1+Ctrl+Left move workspace to output left
-bindsym $mod+Ctrl+j move workspace to output up
-bindsym Mod1+Ctrl+Up move workspace to output up
-bindsym $mod+Ctrl+k move workspave to output down
-bindsym Mod1+Ctrl+Down move workspave to output down
-bindsym $mod+Ctrl+l move workspace to output right
-bindsym Mod1+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspave to output down
+bindsym $mod+Ctrl+Right move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

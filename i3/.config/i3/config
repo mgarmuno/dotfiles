@@ -117,10 +117,10 @@ for_window [workspace=$workspace7] layout tabbed
 for_window [workspace=$workspace8] layout tabbed
 for_window [workspace=$workspace9] layout tabbed
 for_window [workspace=$workspace10] layout tabbed
-for_window [workspace=$workspace7] floating enable
-for_window [workspace=$workspace8] floating enable
-for_window [instance="origin.exe"] floating enable
-for_window [instance="^origin.exe$" class="Wine"] floating enable, fullscreen disable 
+#for_window [workspace=$workspace7] floating enable
+#for_window [workspace=$workspace8] floating enable
+#for_window [instance="origin.exe"] floating enable
+#for_window [instance="^origin.exe$" class="Wine"] floating enable, fullscreen disable 
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -243,9 +243,9 @@ bindsym $mod+g exec steam-runtime
 #bindsym $mod+g exec gamehub
 bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec transmission-gtk
-bindsym $mod+Shift+t exec termite -e htop
-bindsym $mod+e exec  ~/idea-IU-163.15529.8/bin/idea.sh
-bindsym $mod+Shift+e code
+bindsym $mod+Shift+t exec telegram-desktop
+bindsym $mod+e exec code
+bindsym $mod+Shift+e termite -e vim
 bindsym $mod+m exec thunderbird
 bindsym $mod+Shift+m exec virt-manager
 bindsym $mod+n exec blueman-manager

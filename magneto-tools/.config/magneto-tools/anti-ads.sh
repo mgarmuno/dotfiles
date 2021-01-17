@@ -32,7 +32,7 @@ echo >> /etc/hosts
 # wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -O /tmp/hosts.txt
 
 # Unified hosts + fakenews + gambling + porn 
-wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts -O /tmp/hosts.txt
+#wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts -O /tmp/hosts.txt
 
 # Unified hosts + gambling + porn
 wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-porn/hosts -O /tmp/hosts.txt

@@ -34,6 +34,9 @@ echo >> /etc/hosts
 # Unified hosts + fakenews + gambling + porn 
 wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts -O /tmp/hosts.txt
 
+# Unified hosts + gambling + porn
+wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-porn/hosts -O /tmp/hosts.txt
+
 echo >> /etc/hosts
 
 cat /tmp/hosts.txt >> /etc/hosts

@@ -28,7 +28,11 @@ fi
 
 echo >> /etc/hosts
 
-wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -O /tmp/hosts.txt
+# Unified hosts + fakenews + gambling + porn + social
+# wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -O /tmp/hosts.txt
+
+# Unified hosts + fakenews + gambling + porn 
+wget https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts -O /tmp/hosts.txt
 
 echo >> /etc/hosts
 

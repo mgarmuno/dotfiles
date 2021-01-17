@@ -86,10 +86,10 @@ bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Workspaces names
-set $workspace1 "1:"
-set $workspace2 "2:"
-set $workspace3 "3:"
-set $workspace4 "4:"
+set $workspace1 "1:"
+set $workspace2 "2:"
+set $workspace3 "4:"
+set $workspace4 "4:"
 set $workspace5 "5:"
 set $workspace6 "6:"
 set $workspace7 "7:"
@@ -98,8 +98,6 @@ set $workspace9 "9:"
 set $workspace10 "10:"
 set $workspace11 "11:"
 set $workspace12 "12:"
-
-workspace $workspace4 output DVI-D-0
 
 # Open applications on specific workspaces
 assign [class="code-oss"] $workspace1
@@ -153,10 +151,10 @@ bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 
 # Move workspace between screens
-bindsym $mod+Ctrl+Left move workspace to output left
-bindsym $mod+Ctrl+Up move workspace to output up
-bindsym $mod+Ctrl+Down move workspave to output down
-bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Shift+Left move workspace to output left
+bindsym $mod+Shift+Up move workspace to output up
+bindsym $mod+Shift+Down move workspave to output down
+bindsym $mod+Shift+Right move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

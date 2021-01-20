@@ -13,18 +13,18 @@ echo "127.0.0.1		  localhost.localdomain   localhost" > /etc/hosts
 echo "127.0.0.1	$hostname"
 echo "::1			  localhost.localdomain   localhost" >> /etc/hosts
 
-echo >> /etc/hosts
+#echo >> /etc/hosts
 
-echo "########" >> /etc/hosts
-echo "# AEDE #" >> /etc/hosts
-echo "########" >> /etc/hosts
+#echo "########" >> /etc/hosts
+#echo "# AEDE #" >> /etc/hosts
+#echo "########" >> /etc/hosts
 
-echo >> /etc/hosts
+#echo >> /etc/hosts
 
-if [ -f $DIR/BloqueosFireFox.txt ];
-then
-	cat $DIR/BloqueosFireFox.txt >> /etc/hosts
-fi
+#if [ -f $DIR/BloqueosFireFox.txt ];
+#then
+#	cat $DIR/BloqueosFireFox.txt >> /etc/hosts
+#fi
 
 echo >> /etc/hosts
 

@@ -1,7 +1,7 @@
 starship init fish | source
 
 if status is-interactive
-	bitfetch
+	neofetch
 end
 
 # start X at login

@@ -88,7 +88,7 @@ bindsym $mod+a focus parent
 # Workspaces names
 set $workspace1 "1:"
 set $workspace2 "2:"
-set $workspace3 "4:"
+set $workspace3 "3:"
 set $workspace4 "4:"
 set $workspace5 "5:"
 set $workspace6 "6:"
@@ -108,13 +108,8 @@ assign [class="Parole"] $workspace6
 assign [class="Steam"] $workspace7
 for_window [class="Wine"] floating enable
 for_window [title="PlayOnLinux"] floating enable
-for_window [workspace=$workspace1] layout tabbed
-for_window [workspace=$workspace2] layout tabbed
-for_window [workspace=$workspace3] layout tabbed
+for_window [workspace=$workspace4] layout tabbed
 for_window [workspace=$workspace7] layout tabbed
-for_window [workspace=$workspace8] layout tabbed
-for_window [workspace=$workspace9] layout tabbed
-for_window [workspace=$workspace10] layout tabbed
 #for_window [workspace=$workspace7] floating enable
 #for_window [workspace=$workspace8] floating enable
 #for_window [instance="origin.exe"] floating enable
@@ -180,7 +175,7 @@ mode "resize" {
 }
 
 # resize mode
-bindsym $mod+r mode "resize"
+#bindsym $mod+r mode "resize"
 
 # Xresources      var      value       fallback
 set_from_resource $bg      background  #19043C
@@ -231,12 +226,14 @@ mode "$mode_system" {
 
 # shortcuts for launch programs
 bindsym $mod+Return exec termite
-bindsym $mod+w exec firefox
-bindsym $mod+Shift+w exec chromium
-bindsym $mod+Ctrl+w exec google-chrome-stable
+bindsym $mod+w exec librewolf
+bindsym $mod+Shift+w exec librewolf -private-window
+bindsym $mod+f exec firefox -private-window
+bindsym $mod+Shift+f exec ungoogled-chromium
+bindsym $mod+Ctrl+f exec google-chrome-stable
 bindsym $mod+Mod1+w exec waterfox
-bindsym $mod+f exec termite -e ranger
-bindsym $mod+Shift+f exec thunar
+#bindsym $mod+f exec termite -e ranger
+bindsym $mod+r exec termite -e ranger
 bindsym $mod+g exec steam-runtime
 #bindsym $mod+g exec gamehub
 bindsym $mod+Shift+g exec lutris
@@ -251,7 +248,7 @@ bindsym $mod+Shift+n exec networkmanager_dmenu
 bindsym $mod+s exec spotify
 bindsym $mod+Shift+s exec smplayer
 bindsym $mod+p exec popcorntime
-bindsym $mod+Shift+p exec passkeex2
+bindsym $mod+Shift+p exec keepassxc
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+F5 exec playerctl play-pause
 bindsym $mod+F6 exec playerctl previous

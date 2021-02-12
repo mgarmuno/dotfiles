@@ -100,7 +100,7 @@ set $workspace11 "11:"
 set $workspace12 "12:"
 
 # Open applications on specific workspaces
-assign [class="code-oss"] $workspace1
+assign [class="code-oss"] $workspace2
 assign [class="Geary"] $workspace5
 assign [class="Thunderbird"] $workspace5
 assign [class="Spotify"] $workspace6

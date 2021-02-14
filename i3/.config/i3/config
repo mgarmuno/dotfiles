@@ -173,7 +173,7 @@ mode "resize" {
     bindsym k resize shrink height 10 px or 10 ppt
     bindsym l resize grow width 10 px or 10 ppt
 
-    bindsym Lefj resize shrink width 10 px or 10 ppt
+    bindsym Left resize shrink width 10 px or 10 ppt
     bindsym Down resize grow height 10 px or 10 ppt
     bindsym Up resize shrink height 10 px or 10 ppt
     bindsym Right resize grow width 10 px or 10 ppt
@@ -183,7 +183,7 @@ mode "resize" {
 }
 
 # resize mode
-#bindsym $mod+r mode "resize"
+bindsym $mod+Ctrl+r mode "resize"
 
 # Xresources      var      value       fallback
 set_from_resource $bg      background  #19043C
@@ -238,8 +238,8 @@ bindsym $mod+w exec librewolf
 bindsym $mod+Shift+w exec librewolf -private-window
 bindsym $mod+f exec firefox
 bindsym $mod+Mod1+f exec firefox -private-window
-bindsym $mod+Shift+f exec chromium
-bindsym $mod+Ctrl+f exec google-chrome-stable
+bindsym $mod+Shift+f exec google-chrome-stable
+bindsym $mod+Ctrl+f exec chromium
 bindsym $mod+Mod1+w exec waterfox
 #bindsym $mod+f exec termite -e ranger
 bindsym $mod+r exec termite -e ranger

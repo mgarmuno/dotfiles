@@ -27,7 +27,7 @@ set $mod Mod4
 # Font
 font pango:Hack 9, FontAwesome 9
 
-exec sh ~/.screenlayout/tri.sh
+exec_always sh ~/.screenlayout/tri.sh
 
 # No borders
 hide_edge_borders both
@@ -168,15 +168,15 @@ bindsym $mod+Shift+r restart
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 2 px or 2 ppt
+    bindsym j resize grow height 2 px or 2 ppt
+    bindsym k resize shrink height 2 px or 2 ppt
+    bindsym l resize grow width 2 px or 2 ppt
 
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
+    bindsym Left resize shrink width 2 px or 2 ppt
+    bindsym Down resize grow height 2 px or 2 ppt
+    bindsym Up resize shrink height 2 px or 2 ppt
+    bindsym Right resize grow width 2 px or 2 ppt
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -248,6 +248,7 @@ bindsym $mod+g exec steam-runtime
 bindsym $mod+Shift+g exec lutris
 bindsym $mod+t exec transmission-gtk
 bindsym $mod+Shift+t exec telegram-desktop
+bindsym $mod+Ctrl+t exec tootle
 bindsym $mod+e exec code
 bindsym $mod+Shift+e exec ~/.emacs.d/bin/doom run
 bindsym $mod+Ctrl+e termite -e vim
@@ -256,15 +257,16 @@ bindsym $mod+Shift+m exec virt-manager
 bindsym $mod+n exec blueman-manager
 bindsym $mod+Shift+n exec networkmanager_dmenu
 bindsym $mod+s exec spotify
-bindsym $mod+Shift+s exec smplayer
+bindsym $mod+Shift+s exec vlc
+bindsym $mod+Ctrl+s exec smplayer
 bindsym $mod+p exec popcorntime
 bindsym $mod+Shift+p exec keepassxc
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+F5 exec playerctl play-pause
 bindsym $mod+F6 exec playerctl previous
 bindsym $mod+F7 exec playerctl next
-bindsym $mod+b exec i3lock -t -i ~/.config/walls/see_you_cowboy_black.png
-#bindsym $mod+b exec sh ~/.config/i3/scripts/.lock.sh
+#bindsym $mod+b exec i3lock -t -i ~/.config/walls/see_you_cowboy_black.png
+bindsym $mod+b exec sh ~/.config/i3/scripts/.lock.sh
 bindsym $mod+q kill
 bindsym Print exec screenshot
 bindsym $mod+F1 exec --no-startup-id "amixer -q sset Master 2%-"
@@ -300,7 +302,7 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 exec --no-startup-id autocutsel
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id blueman-applet
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.png
 exec_always --no-startup-id ~/.config/alterlay/alternating_layouts.py
 exec --no-startup-id xset -dpms s off

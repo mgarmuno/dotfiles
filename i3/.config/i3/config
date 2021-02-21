@@ -241,6 +241,7 @@ bindsym $mod+Mod1+f exec firefox -private-window
 bindsym $mod+Shift+f exec google-chrome-stable
 bindsym $mod+Ctrl+f exec chromium
 bindsym $mod+Mod1+w exec waterfox
+bindsym $mod+Ctrl+w exec brave
 #bindsym $mod+f exec termite -e ranger
 bindsym $mod+r exec termite -e ranger
 bindsym $mod+g exec steam-runtime

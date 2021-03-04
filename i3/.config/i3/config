@@ -58,7 +58,7 @@ bindsym Ctrl+Shift+l move right
 bindsym Ctrl+Shift+Right move right
 
 # Split in horizontal orientation
-bindsym $mod+c split h
+#bindsym $mod+c split h
 
 # Split in vertical orientation
 bindsym $mod+v split v
@@ -90,8 +90,8 @@ bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Workspaces names
-set $workspace1 "1:"
-set $workspace2 "2:"
+set $workspace1 "1:"
+set $workspace2 "2:"
 set $workspace3 "3:"
 set $workspace4 "4:"
 set $workspace5 "5:"
@@ -112,7 +112,7 @@ assign [class="Parole"] $workspace6
 assign [class="Steam"] $workspace7
 for_window [class="Wine"] floating enable
 for_window [title="PlayOnLinux"] floating enable
-for_window [workspace=$workspace2] layout tabbed
+for_window [workspace=$workspace1] layout tabbed
 for_window [workspace=$workspace4] layout tabbed
 for_window [workspace=$workspace7] layout tabbed
 for_window [workspace=$workspace9] layout tabbed
@@ -160,7 +160,7 @@ bindsym $mod+Shift+Down move workspave to output down
 bindsym $mod+Shift+Right move workspace to output right
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 
 # restart i3 inplace
 bindsym $mod+Shift+r restart
@@ -281,6 +281,8 @@ bindsym $mod+F12 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -
 
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id dmenu_run
+bindsym $mod+c exec ~/go/bin/clipGo show
+bindsym $mod+Shift+c exec ~/go/bin/clipGo delete
 # Multimedia Keys
 # increase volume
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 2%+ unmute

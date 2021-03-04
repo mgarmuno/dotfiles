@@ -1,7 +1,9 @@
 starship init fish | source
 
+set -x GOPATH ~/go
+
 if status is-interactive
-	neofetch
+   neofetch
 end
 
 # start X at login

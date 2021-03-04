@@ -11,13 +11,14 @@
 # requires:
 # xsel
 # https://github.com/cdown/clipnotify
+LastSelected=""
 
 while ./clipnotify;
 do
-	SelectedText="$(xsel)"
 	CopiedText="$(xsel -b)"
-	if [[ $CopiedText == $SelectedText ]]; then
-		~/dev/clipGo/clipGo add
+	if [[ $CopiedText != $LastSelected ]]; then
+		LastSelected=$CopiedText
+		~/go/bin/clipGo add
 	fi
 done
 

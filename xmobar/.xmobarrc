@@ -11,12 +11,10 @@ Config
 		[ Run Cpu ["-H","50","--normal","green","--high","red"] 10
 		, Run Memory [] 10
         , Run Date "%d %b %Y %H:%M" "date" 10
-		, Run Wireless "wlp3s0" [] 30
-		, Run Battery ["-t", "<acstatus>:<left>%", "--", "-l", "red", "-o", "Bat"] 50
         , Run UnsafeStdinReader
     ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %wlp3s0wi% | %battery% | %date%"
+    , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %date%"
        }
 

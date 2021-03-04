@@ -35,7 +35,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-m> :ShowBufferList<CR>
 map <C-f> :Ag<CR>
 
-set clipboard=unnamed
+set clipboard=unnamedplus
 set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4

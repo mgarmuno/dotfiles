@@ -1,16 +1,22 @@
-Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
-       , bgColor = "black"
-       , fgColor = "grey"
-       , position = TopW L 90
-       , commands = [ Run Weather "EGPF" ["-t"," <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
-                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
-                    , Run Date "%a %b %_d %l:%M" "date" 10
-                    , Run StdinReader
-                    ]
-       , sepChar = "%"
-       , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %EGPF%"
+Config 
+	{ font = "xft:Hack:pixelsize=11,M+ 2c:pixelsize=11"
+    , bgColor = "#282A36"
+    , fgColor = "#F1F1F1"
+    , position = TopW L 100
+	, lowerOnStart = True
+    --, hideOnStart = False
+    --, allDesktops = True
+    --, persistent = True
+    , commands = 
+		[ Run Cpu ["-H","50","--normal","green","--high","red"] 10
+		, Run Memory [] 10
+        , Run Date "%d %b %Y %H:%M" "date" 10
+		, Run Wireless "wlp3s0" [] 30
+		, Run Battery ["-t", "<acstatus>:<left>%", "--", "-l", "red", "-o", "Bat"] 50
+        , Run UnsafeStdinReader
+    ]
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %wlp3s0wi% | %battery% | %date%"
        }
 

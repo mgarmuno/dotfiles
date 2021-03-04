@@ -1,15 +1,7 @@
 
-xmonad.hs:37:1: warning: [-Wtabs]
-    Tab character found here, and in 48 further locations.
+xmonad.hs:86:1: warning: [-Wtabs]
+    Tab character found here, and in 36 further locations.
     Please use spaces instead.
    |
-37 |         where 
+86 |         [ ("M-C-r", spawn "xmonad --recompile")
    | ^^^^^^^^
-
-xmonad.hs:70:57: warning: [-Wdeprecations]
-    In the use of ‘defaultConfig’
-    (imported from XMonad, but defined in XMonad.Config):
-    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
-   |
-70 |                 , layoutHook = avoidStruts $ layoutHook defaultConfig
-   |                                                         ^^^^^^^^^^^^^

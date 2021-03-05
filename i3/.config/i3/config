@@ -77,8 +77,8 @@ bindsym $mod+F10 fullscreen
 # Change container layout
 # bindsym Mod1+s layout stacking
 # bindsym Mod1+t layout tabbed
-bindcode $mod+23 layout toggle splitv splith
-bindcode $mod+Shift+23 layout toggle tabbed split
+bindcode Mod1+23 layout toggle splitv splith
+bindcode Mod1+Shift+23 layout toggle tabbed split
 
 # Toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -150,8 +150,8 @@ bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 bindsym $mod+minus workspace $workspace11
 bindsym $mod+equal workspace $workspace12
-bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # Move workspace between screens
 bindsym $mod+Shift+Left move workspace to output left
@@ -310,4 +310,5 @@ exec_always --no-startup-id feh --bg-scale ~/.config/walls/welcome_home_dracula.
 exec_always --no-startup-id ~/.config/alterlay/alternating_layouts.py
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id sh ~/.config/mtools/cliplistner.sh
 #exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --pos 2560x180 --rotate normal --output HDMI-0 --off --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off

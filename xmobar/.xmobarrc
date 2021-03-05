@@ -10,11 +10,13 @@ Config
     , commands = 
 		[ Run Cpu ["-H","50","--normal","green","--high","red"] 10
 		, Run Memory [] 10
+        , Run DynNetwork [] 50
+        , Run Battery ["-t", "<acstatus>: <left>%"] 50
         , Run Date "%d %b %Y %H:%M" "date" 10
         , Run UnsafeStdinReader
     ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %date%"
+    , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %dynnetwork% | %battery% | %date%"
        }
 

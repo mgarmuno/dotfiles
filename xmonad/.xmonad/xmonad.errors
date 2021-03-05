@@ -1,7 +1,7 @@
 
-xmonad.hs:86:1: warning: [-Wtabs]
-    Tab character found here, and in 36 further locations.
+xmonad.hs:93:1: warning: [-Wtabs]
+    Tab character found here, and in five further locations.
     Please use spaces instead.
    |
-86 |         [ ("M-C-r", spawn "xmonad --recompile")
+93 |         [ ("M-C-r", spawn "xmonad --recompile")
    | ^^^^^^^^

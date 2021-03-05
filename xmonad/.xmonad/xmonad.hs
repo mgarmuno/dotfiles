@@ -36,12 +36,19 @@ import qualified XMonad.Layout.ToggleLayouts as T(toggleLayouts, ToggleLayout(To
 
 import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Util.Run(spawnPipe, safeSpawn)
+import XMonad.Util.SpawnOnce
 
 import Data.Maybe(fromJust)
 import qualified Data.Map as M
 
 import System.IO
 
+myStartupHook :: X ()
+myStartupHook = do
+          spawnOnce "feh --bg-scale ~/.config/walls/welcome_home_dracula.png"
+          spawnOnce "setxkbmap -layout us -variant altgr-intl -option nodeadkeys"
+          spawnOnce "xrdb -merge ~/.Xresources"
+          spawnOnce "sh ~/.config/mtools/cliplistner.sh"
 
 myFont :: String
 myFont = "xft:Hack:regular:size=9:antialias=true:hinting=true"
@@ -92,8 +99,7 @@ myKeys =
 	, ("M-e", safeSpawn doomEmacs ["run"])
 	]
 
-myTabTheme = def { fontName            = myFont
-                 , activeColor         = "#46d9ff"
+myTabTheme = def { fontName            = myFont , activeColor         = "#46d9ff"
                  , inactiveColor       = "#313846"
                  , activeBorderColor   = "#46d9ff"
                  , inactiveBorderColor = "#282c34"
@@ -182,22 +188,23 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
                                  ||| threeRow
 
 main = do
-	xmproc <- spawnPipe "xmobar"
-	xmonad $ ewmh def
-		{manageHook = manageDocks <+> myManageHook 
-			<+> manageHook desktopConfig
+    xmproc <- spawnPipe "xmobar"
+    xmonad $ ewmh def
+        {manageHook = manageDocks <+> myManageHook
+            <+> manageHook desktopConfig
         , layoutHook = showWName' myShowWNameTheme $ myLayoutHook
-		, workspaces = myWorkspaces
-		, logHook = workspaceHistoryHook <+> myLogHook <+> dynamicLogWithPP xmobarPP
-			{ ppOutput = hPutStrLn xmproc
-			, ppCurrent = xmobarColor "#98BE65" "" . wrap "[" "]"
-			, ppVisible = xmobarColor "#98BE65" "" . clickable
-			, ppHidden = xmobarColor "#82AAFF" "" . wrap "*" "" . clickable
+        , workspaces = myWorkspaces
+        , startupHook = myStartupHook
+        , logHook = workspaceHistoryHook <+> myLogHook <+> dynamicLogWithPP xmobarPP
+            { ppOutput = hPutStrLn xmproc
+            , ppCurrent = xmobarColor "#98BE65" "" . wrap "[" "]"
+            , ppVisible = xmobarColor "#98BE65" "" . clickable
+            , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" "" . clickable
             , ppHiddenNoWindows = xmobarColor "#C792EA" "" . clickable
-			, ppTitle = xmobarColor "#b3afc2" "" . shorten 60
+            , ppTitle = xmobarColor "#b3afc2" "" . shorten 60
             , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"
             , ppExtras  = [windowCount]
             , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
-		}
-		, modMask = myModMask
-	} `additionalKeysP` myKeys
+            }
+        , modMask = myModMask
+        } `additionalKeysP` myKeys

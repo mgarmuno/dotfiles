@@ -13,7 +13,7 @@
 # https://github.com/cdown/clipnotify
 LastSelected=""
 
-while ./clipnotify;
+while /home/magneto/.config/mtools/clipnotify;
 do
 	CopiedText="$(xsel -b)"
 	if [[ $CopiedText != $LastSelected ]]; then

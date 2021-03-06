@@ -2,10 +2,11 @@
 
 #blueman-applet
 setxkbmap -layout us -variant altgr-intl -option nodeadkeys &
-sh /home/magneto/.config/mtools/cliplistner.sh &
+#$HOME/.config/mtools/ttyecho -n /dev/pts/0 sh $HOME/.config/mtools/cliplistner.sh &
 xset -dpms s off &
 #xrdb -merge ~/.Xresources
-#blueman-applet
-#pasystray
+blueman-applet &
+pasystray &
 pulseaudio &
+dwmblocks &
 feh --bg-scale /home/magneto/.config/walls/welcome_home_dracula.png &

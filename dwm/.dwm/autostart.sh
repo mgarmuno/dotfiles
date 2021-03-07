@@ -8,5 +8,6 @@ xset -dpms s off &
 blueman-applet &
 pasystray &
 pulseaudio &
-dwmblocks &
+#dwmblocks &
+slstatus &
 feh --bg-scale /home/magneto/.config/walls/welcome_home_dracula.png &

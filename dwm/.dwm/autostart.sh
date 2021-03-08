@@ -10,4 +10,5 @@ pasystray &
 pulseaudio &
 #dwmblocks &
 slstatus &
+flameshot &
 feh --bg-scale /home/magneto/.config/walls/welcome_home_dracula.png &

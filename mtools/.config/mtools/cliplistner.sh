@@ -11,6 +11,11 @@
 # requires:
 # xsel
 # https://github.com/cdown/clipnotify
+
+if pidof -o %PPID -x "clipnotify">/dev/null; then
+	exit 1
+fi
+
 LastSelected=""
 
 while ~/.config/mtools/clipnotify;

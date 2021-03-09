@@ -3,7 +3,8 @@ starship init fish | source
 set -x GOPATH ~/go
 
 if status is-interactive
-   neofetch
+	sh $HOME/.config/mtools/cliplistner.sh &
+	neofetch
 end
 
 # start X at login

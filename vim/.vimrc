@@ -40,6 +40,8 @@ set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set relativenumber
+set ignorecase
+set smartcase
 setlocal omnifunc=go#complete#Complete
 
 let g:dracula_colorterm = 0

@@ -18,7 +18,7 @@ ZSH_THEME="blinks"
 # End of lines configured by zsh-newuser-install
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
-alias ll="ls -la"
+alias ll="ls -la --color"
 alias rasp="ssh pi@192.168.1.41"
 
 fpath+=$HOME/.zsh/pure
@@ -28,3 +28,6 @@ prompt pure
 
 zstyle ':prompt:pure:prompt:*' color green
 zstyle :prompt:pure:path color cyan
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin

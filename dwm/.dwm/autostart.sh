@@ -8,7 +8,7 @@ xset -dpms s off &
 blueman-applet &
 pasystray &
 pulseaudio &
-#dwmblocks &
-slstatus &
+dwmblocks &
+#slstatus &
 flameshot &
-feh --bg-scale /home/magneto/.config/walls/welcome_home_dracula.png &
+feh --bg-scale /home/magneto/.config/walls/3440x1440/cowboy_bebop.jpg &

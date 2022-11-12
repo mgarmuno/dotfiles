@@ -12,4 +12,5 @@ dwmblocks &
 #slstatus &
 flameshot &
 insync start &
-feh --bg-scale /home/magneto/.config/walls/3440x1440/cowboy_bebop.jpg &
+#feh --bg-scale /home/magneto/.config/walls/3440x1440/cowboy_bebop.jpg &
+feh --bg-fill .config/walls/welcome_home_dracula.png &
